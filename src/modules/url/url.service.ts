@@ -48,6 +48,10 @@ export class UrlService {
       take: limit,
     });
 
+    // if (data.length === 0) {
+    //   throw new NotFoundException('No URLs found');
+    // }
+
     const totalCount = await this.databaseService.url.count({});
 
     const meta = {
