@@ -6,8 +6,7 @@ export class CreateUrlDto {
 
   @IsOptional()
   @IsString()
-  @IsNotEmpty()
-  description: string;
+  description?: string;
 
   @IsUrl()
   redirect: string;
