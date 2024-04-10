@@ -52,7 +52,9 @@ export class UrlService {
     //   throw new NotFoundException('No URLs found');
     // }
 
-    const totalCount = await this.databaseService.url.count({});
+    const totalCount = await this.databaseService.url.count({
+      where: whereClause,
+    });
 
     const meta = {
       totalCount,
